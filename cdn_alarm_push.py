@@ -47,7 +47,7 @@ def send_msg(AlarmContent):
 
     #发送给vivo
     #定义VIVO告警地址
-    vivo_url = "https://alarm.vivo.com.cn/api/alarms/save?appName=cdn&eventCode=001&secretKey= Hj7qq2UGbAv1wG99&content=" + AlarmContent
+    vivo_url = "https://alarm.vivo.com.cn/api/alarms/save?appName=cdn&eventCode=001&secretKey=Hj7qq2UGbAv1wG99&content=" + AlarmContent
     response = requests.get(url=vivo_url).text
 
     print("vivo_reponse" + response)
