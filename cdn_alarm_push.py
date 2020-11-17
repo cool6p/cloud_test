@@ -17,7 +17,7 @@ logger = logging.getLogger()
 logger.setLevel(level=logging.INFO)
 
 #定义测试目标地址
-target_url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=1e06913c-a2a3-44c6-8440-b33d8240d2fa"
+target_url = "这个我也去掉了，详见文档"
 
 def main_handler(event, context):
     logger.info("starting to send message to VIVO from main handler")
@@ -47,7 +47,7 @@ def send_msg(AlarmContent):
 
     #发送给vivo
     #定义VIVO告警地址
-    vivo_url = "https://alarm.vivo.com.cn/api/alarms/save?appName=cdn&eventCode=001&secretKey=Hj7qq2UGbAv1wG99&content=" + AlarmContent
+    vivo_url = "这里我把链接去掉了，详见文档" + AlarmContent
     response = requests.get(url=vivo_url).text
 
     print("vivo_reponse" + response)
